@@ -1,0 +1,7 @@
+D:\Projetos\Pessoais\AWSCallenges\AWS_Challenge_CSHARP\AWS_Challenge_CSHARP\obj\Debug\AWS_Challenge_CSHARP.csprojAssemblyReference.cache
+D:\Projetos\Pessoais\AWSCallenges\AWS_Challenge_CSHARP\AWS_Challenge_CSHARP\obj\Debug\AWS_Challenge_CSHARP.csproj.CoreCompileInputs.cache
+D:\Projetos\Pessoais\AWSCallenges\AWS_Challenge_CSHARP\AWS_Challenge_CSHARP\bin\Debug\AWS_Challenge_CSHARP.exe.config
+D:\Projetos\Pessoais\AWSCallenges\AWS_Challenge_CSHARP\AWS_Challenge_CSHARP\bin\Debug\AWS_Challenge_CSHARP.exe
+D:\Projetos\Pessoais\AWSCallenges\AWS_Challenge_CSHARP\AWS_Challenge_CSHARP\bin\Debug\AWS_Challenge_CSHARP.pdb
+D:\Projetos\Pessoais\AWSCallenges\AWS_Challenge_CSHARP\AWS_Challenge_CSHARP\obj\Debug\AWS_Challenge_CSHARP.exe
+D:\Projetos\Pessoais\AWSCallenges\AWS_Challenge_CSHARP\AWS_Challenge_CSHARP\obj\Debug\AWS_Challenge_CSHARP.pdb

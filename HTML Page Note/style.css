@@ -1,0 +1,159 @@
+.header-title {
+  border-bottom: solid 3px #DEDEDE;
+}
+
+.note-footer, .note-list { 
+	float: left;
+}
+
+.note-list { 
+	width: 100%;
+}
+
+.note-list h3 {
+	float: left;
+	width: 105px;
+	margin: 10px 0px;
+}
+
+.note-list small {
+	float: left;
+	margin-top: 15px;
+}
+
+.saved-notes {
+  margin-top: 20px;
+  display: inline-block;
+  margin-left: 2.5%;
+  width: 30.5%;
+  height: 400px;
+  overflow: scroll;
+  border: solid 3px #929292;
+  border-radius: 5px;
+  background-color: #DEDEDE;
+}
+
+#body-field {
+  font-size: 14px;
+  font-weight: 500;
+  height: 100px;
+  width: 422px;
+  float: left;
+}
+
+#saved-notes {
+  border: 1px solid lightgrey;
+  width: 426px;
+  float: left;
+}
+
+.notepad-, .notepad-footer, .note-list-title {
+  float: left;
+  width:100%;
+}
+
+.display {
+  display: visible;
+}
+
+.no-display {
+  display: none;
+}
+
+button {
+  margin: 2px;
+  border: solid 2px blueviolet;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+button:hover, .color-box:hover {
+  cursor: pointer;
+}
+
+#listed:nth-child(odd):hover {
+  cursor: pointer;
+}
+
+#btn-save {
+  background-color: #009a0e;
+}
+
+#btn-delete {
+  background-color: #E41A36;
+}
+
+.danger {
+	color: #ff5b5b;
+	float: left;
+	width: 100%;
+	margin: 10px 0px;
+    font-size: 15pt;
+    font-weight: 500;
+}
+select:active, select:hover {
+  outline: none
+}
+
+.list-colors {
+	width: 100%;
+	float:left;
+	margin-bottom: 5px;
+}
+
+.list-colors div{
+	padding: 14px 3px;
+    margin: 0px 2px;
+    border-radius: 4px;
+    border: 2px solid black;
+    float: left;
+    width: 25px;
+    cursor: pointer;
+}
+
+.white {
+  background-color: #FFFFFF;
+}
+
+.silver {
+  background-color: #C0C0C0;
+}
+
+.gray {
+  background-color: #808080;
+}
+
+.olive {
+  background-color: #808000;
+}
+
+.pink {
+  background-color: #FFC0CB;
+}
+
+.salmon {
+  background-color: #FA8072;
+}
+
+.coral {
+  background-color: #FF7F50;
+}
+
+.lightgreen {
+  background-color: #90EE90;
+}
+
+.violet {
+  background-color: #EE82EE;
+}
+
+.blueviolet {
+  background-color: #8A2BE2;
+}
+
+.lightseagreen {
+  background-color: #20B2AA;
+}

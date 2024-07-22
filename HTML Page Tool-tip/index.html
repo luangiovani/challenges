@@ -1,0 +1,250 @@
+<html>
+	<head>
+		<title>Teste Tool-tip</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script type="text/javascript">
+		
+		$.fn.extend({
+			alertar: function() {
+				alert("ID = " + this.id);
+			},
+			showToolTip: function(options) {
+				
+				var element = this[0];
+				$(".tooltip").removeClass('top');
+				$(".tooltip").removeClass('bottom');
+				$(".tooltip").removeClass('left');
+				$(".tooltip").removeClass('right');
+				
+				$(".tooltip").show();
+				
+				if(element.offsetTop >= $(".tooltip-body")[0].offsetHeight) {
+					$(".tooltip").addClass('top');
+					$(".tooltip").css('top', ((element.offsetTop-$(".tooltip-body")[0].offsetHeight-10)+'px'));
+					$(".tooltip").css('left', (element.offsetLeft+1)+'px');
+				} else if((element.parentElement.offsetHeight-(element.offsetTop+10)) >= $(".tooltip-body")[0].offsetHeight) {
+					$(".tooltip").addClass('bottom');
+					$(".tooltip").css('top', ((element.offsetTop+10)+'px'));
+				} else if(element.offsetLeft >= $(".tooltip-body").width()) {
+					$(".tooltip").addClass('left');
+					$(".tooltip").css('right', '-14.5px');
+					$(".tooltip").css('top', (element.offsetTop-14.5)+'px');
+				} else {
+					$(".tooltip").addClass('right');
+					$(".tooltip").css('left', (element.offsetWidth) +'px');
+					$(".tooltip").css('top', (element.offsetTop-14.5)+'px');
+				}
+					
+				var settings = $.extend({
+					// These are the defaults.
+					Title: "Title Here",
+					Content: "Content Here",
+					onApprove: function(){
+					}
+				}, options );
+		
+				$(".tooltip .elem-tooltip-title").html('<h3>' + settings.Title + '</h3>');
+				$(".tooltip .elem-tooltip-content").html(settings.Content);
+				$(".tooltip .elem-tooltip-action button").unbind('click');
+				$(".tooltip .elem-tooltip-action button").bind('click', settings.onApprove);
+				
+				
+				
+				$(".tooltip").show();
+				
+			}
+		});
+
+		function onApproved() {
+			alert('Approved!');
+		}
+
+		$(document).ready(function(){
+			//alert($("#teste-p").offset().top);
+			//alert($("#teste-p").position().top);
+			//if($("#teste-p").offset().top < $(".tooltip-body")[0].offsetHeight)			
+			//	$(".tooltip").css('top', (($("#teste-p").offset().top)+$("#teste-p").height())+'px');
+			$("#teste-p").mouseover(function(){
+				$("#teste-p").showToolTip({
+					Title: 'This is the title',
+					Content: 'This is the content',
+					onApprove: onApproved
+					});
+			});
+			$("body, #teste-p").on('click', function(){ $(".tooltip").hide() });
+		});
+		</script>
+		<style type="text/css">
+			
+			.tooltip {
+			  position: relative;
+			  display:none;
+			}
+			
+			.tooltip-body {
+			  position: absolute;
+			  padding: 10px;
+			  background-color: #5d5b5b;
+			  border-radius: 3px;
+			  font-size: 14px;
+			  color: #eee;
+			  animation: moveup 0.1s linear;
+			}
+			
+			.top .tooltip-body:after {
+			  position: absolute;
+			  content: "";
+			  top: 100%;
+			  border-top: 5px solid #5d5b5b;
+			  border-right: 5px solid transparent;
+			  border-bottom: 5px solid transparent;
+			  border-left: 5px solid transparent;
+			}
+			
+			.right .tooltip-body:after {
+			  position: absolute;
+			  content: "";
+			  top: 10px;
+			  left: -10px;
+			  border-top: 5px solid transparent;
+			  border-right: 5px solid #5d5b5b;
+			  border-bottom: 5px solid transparent;
+			  border-left: 5px solid transparent;
+			}
+			
+			.bottom .tooltip-body:after {
+			  position: absolute;
+			  content: "";
+			  top: -10px;
+			  border-top: 5px solid transparent;
+			  border-right: 5px solid transparent;
+			  border-bottom: 5px solid #5d5b5b;
+			  border-left: 5px solid transparent;
+			}
+
+			.left .tooltip-body:after {
+			  position: absolute;
+			  content: "";
+			  top: 10px;
+			  left: 99%;
+			  border-top: 5px solid transparent;
+			  border-right: 5px solid transparent;
+			  border-bottom: 5px solid transparent;
+			  border-left: 5px solid #5d5b5b;
+			}
+			
+			.btn {
+			  display: inline-block;
+			  margin-bottom: 0;
+			  font-weight: normal;
+			  text-align: center;
+			  white-space: nowrap;
+			  vertical-align: middle;
+			  -ms-touch-action: manipulation;
+			  touch-action: manipulation;
+			  cursor: pointer;
+			  background-image: none;
+			  border: 1px solid transparent;
+			  padding: 4px 8px;
+			  font-size: 12px;
+			  line-height: 1.42857143;
+			  border-radius: 4px;
+			  -webkit-user-select: none;
+			  -moz-user-select: none;
+			  -ms-user-select: none;
+			  user-select: none;
+			  float: right;
+			  margin-top:10px;
+			}
+			.btn:focus,
+			.btn:active:focus,
+			.btn.active:focus,
+			.btn.focus,
+			.btn:active.focus,
+			.btn.active.focus {
+			  outline: 5px auto -webkit-focus-ring-color;
+			  outline-offset: -2px;
+			}
+			.btn:hover,
+			.btn:focus,
+			.btn.focus {
+			  color: #333333;
+			  text-decoration: none;
+			}
+			
+			.btn-default {
+			  color: #333333;
+			  background-color: #ffffff;
+			  border-color: #cccccc;
+			}
+			.btn-default:focus,
+			.btn-default.focus {
+			  color: #333333;
+			  background-color: #e6e6e6;
+			  border-color: #8c8c8c;
+			}
+			.btn-default:hover {
+			  color: #333333;
+			  background-color: #e6e6e6;
+			  border-color: #adadad;
+			}
+			.btn-default:active,
+			.btn-default.active,
+			.open > .dropdown-toggle.btn-default {
+			  color: #333333;
+			  background-color: #e6e6e6;
+			  background-image: none;
+			  border-color: #adadad;
+			}
+			.btn-default:active:hover,
+			.btn-default.active:hover,
+			.open > .dropdown-toggle.btn-default:hover,
+			.btn-default:active:focus,
+			.btn-default.active:focus,
+			.open > .dropdown-toggle.btn-default:focus,
+			.btn-default:active.focus,
+			.btn-default.active.focus,
+			.open > .dropdown-toggle.btn-default.focus {
+			  color: #333333;
+			  background-color: #d4d4d4;
+			  border-color: #8c8c8c;
+			}
+			.btn-default.disabled:hover,
+			.btn-default[disabled]:hover,
+			fieldset[disabled] .btn-default:hover,
+			.btn-default.disabled:focus,
+			.btn-default[disabled]:focus,
+			fieldset[disabled] .btn-default:focus,
+			.btn-default.disabled.focus,
+			.btn-default[disabled].focus,
+			fieldset[disabled] .btn-default.focus {
+			  background-color: #ffffff;
+			  border-color: #cccccc;
+			}
+			.btn-default .badge {
+			  color: #ffffff;
+			  background-color: #333333;
+			}
+		</style>
+	</head>
+	<body>
+		<div style="width:500px; height:400px; border:1px solid black; float:left;">
+			<div class="tooltip">
+				<div class="tooltip-body">
+					<div class="elem-tooltip-title"><h3>This is the title</h3></div>
+					<div class="elem-tooltip-content">This is the content</div>
+					<div class="elem-tooltip-action">
+						<button class="elem-tooltip-button btn btn-default">Okay</button>
+					</div>
+				</div>
+			</div>
+			<div class="tool" id="teste-p" style="margin-left:150px; margin-top:115px; width:40px;">Test</div>			
+			</div>
+			<div class="tool" id="teste-p" style="margin-left:150px; margin-top:115px; width:40px;">Test</div>			
+			</div>
+			<div class="tool" id="teste-p" style="margin-left:150px; margin-top:115px; width:40px;">Test</div>			
+			</div>
+			<div class="tool" id="teste-p" style="margin-left:150px; margin-top:115px; width:40px;">Test</div>			
+			</div>
+	</body>
+</html>

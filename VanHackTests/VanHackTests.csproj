@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="290056cb-ab70-4294-b262-e84c01f77324\**" />
+    <Compile Remove="angular--birthday-records-hpma48cohe\**" />
+    <Compile Remove="Angular\**" />
+    <Compile Remove="HTML Page Note\**" />
+    <Compile Remove="HTML Page Tool-tip\**" />
+    <Compile Remove="node-js-express--github-dataset-api-6kmle676kc8\**" />
+    <Compile Remove="NodeXSOlder\**" />
+    <Compile Remove="QUERIES\**" />
+    <Compile Remove="react--login-portal-10gp4j0bs5s\**" />
+    <EmbeddedResource Remove="290056cb-ab70-4294-b262-e84c01f77324\**" />
+    <EmbeddedResource Remove="angular--birthday-records-hpma48cohe\**" />
+    <EmbeddedResource Remove="Angular\**" />
+    <EmbeddedResource Remove="HTML Page Note\**" />
+    <EmbeddedResource Remove="HTML Page Tool-tip\**" />
+    <EmbeddedResource Remove="node-js-express--github-dataset-api-6kmle676kc8\**" />
+    <EmbeddedResource Remove="NodeXSOlder\**" />
+    <EmbeddedResource Remove="QUERIES\**" />
+    <EmbeddedResource Remove="react--login-portal-10gp4j0bs5s\**" />
+    <None Remove="290056cb-ab70-4294-b262-e84c01f77324\**" />
+    <None Remove="angular--birthday-records-hpma48cohe\**" />
+    <None Remove="Angular\**" />
+    <None Remove="HTML Page Note\**" />
+    <None Remove="HTML Page Tool-tip\**" />
+    <None Remove="node-js-express--github-dataset-api-6kmle676kc8\**" />
+    <None Remove="NodeXSOlder\**" />
+    <None Remove="QUERIES\**" />
+    <None Remove="react--login-portal-10gp4j0bs5s\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+
+</Project>

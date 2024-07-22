@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title></title>
+    <link rel='stylesheet' href='style.css'>
+  </head>
+  <body>
+	<div class="header-title">
+		<h3>My Notes</h3>
+	</div>
+	<div class="content">
+		<div class="notepad">
+			<h3>Notepad</h3>
+			<div class="list-colors">
+				<div data-value="#FFFFFF" class="select-color white" title="White"></div>
+				<div data-value="#C0C0C0" class="select-color silver" title="Silver"></div>
+				<div data-value="#808080" class="select-color gray" title="Gray"></div>
+				<div data-value="#FFC0CB" class="select-color pink" title="Pink"></div>
+				<div data-value="#808000" class="select-color olive" title="Olive"></div>
+				<div data-value="#FA8072" class="select-color salmon" title="Salmon"></div>
+				<div data-value="#90EE90" class="select-color lightgreen" title="LightGreen"></div>
+				<div data-value="#FF7F50" class="select-color coral" title="Coral"></div>
+				<div data-value="#EE82EE" class="select-color violet" title="Violet"></div>
+				<div data-value="#8A2BE2" class="select-color blueviolet" title="BlueViolet"></div>
+				<div data-value="#20B2AA" class="select-color lightseagreen" title="LightSeaGreen"></div>
+			</div>
+			<textarea id="body-field"></textarea>
+		</div>
+		<span class="danger"></span>
+		<div class="notepad-footer">
+			<button id="btn-save">Save</button>
+			<button id="btn-delete">X</button>
+		</div>
+		<div class="note-list no-display">
+			<div class="note-list-title">
+				<h3>Saved Notes</h3><small>Click to Edit/Delete</small>
+			</div>
+			<div id='saved-notes'></div>
+		</div>
+		
+	</div>
+  </body>
+  <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
+  <script type='text/javascript' src='app.js'></script>
+</html>

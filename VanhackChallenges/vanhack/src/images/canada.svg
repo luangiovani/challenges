@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>flag-canada</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Event-Pipeline" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="flag-canada">
+            <circle id="Oval" fill="#F0F0F0" cx="16" cy="16" r="16"></circle>
+            <g id="Group" transform="translate(0.000000, 1.562500)" fill="#D80027">
+                <path d="M32,14.4375 C32,8.094125 28.3084375,2.613125 22.9565,0.025125 L22.9565,28.8498125 C28.3084375,26.261875 32,20.780875 32,14.4375 Z" id="Path"></path>
+                <path d="M0,14.4375 C0,20.780875 3.6915625,26.261875 9.0435,28.849875 L9.0435,0.025125 C3.6915625,2.613125 0,8.094125 0,14.4375 Z" id="Path"></path>
+                <polygon id="Path" points="18.782625 16.5244375 21.5651875 15.133125 20.1739375 14.4375 20.1739375 13.0461875 17.3913125 14.4375 18.782625 11.654875 17.3913125 11.654875 16 9.5679375 14.6086875 11.654875 13.217375 11.654875 14.6086875 14.4375 11.8260625 13.0461875 11.8260625 14.4375 10.4348125 15.133125 13.217375 16.5244375 12.52175 17.91575 15.304375 17.91575 15.304375 20.0026875 16.695625 20.0026875 16.695625 17.91575 19.47825 17.91575"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
